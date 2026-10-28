@@ -37,7 +37,7 @@ ADDON_ID = "program.dsh"
 LOGWARNING = getattr(xbmc, "LOGWARNING", 2)
 LOGERROR = getattr(xbmc, "LOGERROR", 3)
 
-#: ``RunScript(program.dsh, ask)`` jumps straight into a action.
+#: ``RunScript(program.dsh, ask)`` jumps straight into one action.
 DIRECT_ACTIONS = ("now_playing", "ask", "picks", "resume", "remote", "settings")
 
 
