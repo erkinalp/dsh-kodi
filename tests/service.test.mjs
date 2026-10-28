@@ -125,6 +125,7 @@ test('start() pings, seeds the cache and reports library counts', async (t) => {
   assert.equal(snapshot.playing, false);
   assert.equal(snapshot.item, null);
   assert.equal(snapshot.position, null);
+  assert.equal(snapshot.queueIndex, null);
   assert.equal(snapshot.speed, null);
   assert.equal(snapshot.volume, 62);
   assert.equal(snapshot.muted, false);
@@ -285,7 +286,8 @@ test('play() opens a library item, a file, or appends to the queue', async (t) =
   assert.equal(snapshot.connected, true);
   assert.equal(snapshot.playing, true);
   assert.equal(snapshot.speed, 1);
-  assert.equal(snapshot.position, 1, 'queue positions are 1-based');
+  assert.equal(snapshot.queueIndex, 1, 'queue slots are 1-based');
+  assert.equal(typeof snapshot.position, 'number', 'position is playback seconds');
   assert.equal(snapshot.item?.id, 1);
   assert.equal(snapshot.item?.kind, 'movie');
   assert.equal(snapshot.item?.title, 'Big Buck Bunny');
@@ -326,7 +328,7 @@ test('queueList() and queue() drive the playlist', async (t) => {
   assert.equal(jumped.current, 2);
   assert.deepEqual(kodi.findCalls('Player.Open')[0].params.item, { playlistid: 1, position: 1 });
   assert.equal(service.snapshot().playing, true);
-  assert.equal(service.snapshot().position, 2);
+  assert.equal(service.snapshot().queueIndex, 2);
 
   const removed = await service.queue('remove', { position: 1 });
   assert.equal(removed.length, 2);
@@ -391,11 +393,11 @@ test('transport() play/pause/seek/skip/speed and its no-player behaviour', async
 
   // Strings still change queue item.
   await service.transport('skip', { value: 'next' });
-  assert.equal(service.snapshot().position, 2);
+  assert.equal(service.snapshot().queueIndex, 2);
   assert.equal(kodi.findCalls('Player.GoTo').at(-1).params.to, 'next');
 
   await service.transport('skip', { value: 'previous' });
-  assert.equal(service.snapshot().position, 1);
+  assert.equal(service.snapshot().queueIndex, 1);
   assert.equal(kodi.findCalls('Player.GoTo').at(-1).params.to, 'previous');
 
   await service.transport('speed', { value: 2 });
@@ -498,7 +500,7 @@ test('the notification socket refreshes the snapshot, and unsubscribe stops deli
   assert.equal(snapshot.item.season, 1);
   assert.equal(snapshot.item.episode, 1);
   assert.equal(snapshot.playerType, 'video');
-  assert.equal(snapshot.position, 1, 'the first queue item is position 1');
+  assert.equal(snapshot.queueIndex, 1, 'the first queue item is slot 1');
   assert.equal(snapshot.percentage, 6.7);
   assert.equal(snapshot.queue.length, 1);
   assert.ok(kodi.findCalls('Player.GetActivePlayers').length > changesBefore, 'the notification must have caused a refresh');
@@ -628,7 +630,7 @@ test('seek() returns the post-seek state even when Kodi still reports the old on
   await service.transport('seek', { value: 100 });
 
   assert.equal(service.snapshot().percentage, 16.8, 'the pre-seek 0% must not survive');
-  assert.equal(service.snapshot().position, 1);
+  assert.equal(service.snapshot().queueIndex, 1);
   assert.equal(kodi.state.staleSeek.remaining, 0, 'the service polled past the stale reads');
 
   // A relative skip settles the same way.
@@ -672,7 +674,7 @@ test('queue jump converts the 1-based position to Kodi 0-based to/position', asy
 
   assert.equal(jumped.current, 2);
   assert.deepEqual(kodi.findCalls('Player.GoTo').at(-1).params, { playerid: 1, to: 1 });
-  assert.equal(service.snapshot().position, 2);
+  assert.equal(service.snapshot().queueIndex, 2);
   assert.equal(service.snapshot().item?.id, 2, 'the snapshot shows the item GoTo actually selected');
   assert.equal(kodi.state.staleItem.remaining, 0);
 });

@@ -81,6 +81,33 @@ behind the bridge against the shared mock, which pins the cross-module seam.
   episodes) plus a targeted `play` (`{ok:true, playing:true}`, season/episode
   `null`).
 
+## Agent -> TV direction (tested after the first release)
+
+Exercised through the real tools against the live box, each result confirmed by
+an independent JSON-RPC read rather than the tool's own report:
+
+| Command | Independent check |
+|---|---|
+| `kodi_search "night"` | 1 match, movie _Night Drive_ |
+| `kodi_play query:"Night Drive"` | active player video, item `Night Drive`, speed 1 |
+| `kodi_transport pause` | `speed: 0` |
+| `kodi_transport play` | `speed: 1` |
+| `kodi_transport seek 20` | position ~21 s reported, 24.9 s observed after the command |
+| `kodi_volume set 25` | `Application.GetProperties.volume: 25` |
+| `kodi_queue add [1,2]` | playlist = Night Drive, Episode 1, Episode 2 |
+| `kodi_queue jump 3` | playing `Episode 2` (Kodi index 2 -> 1-based 3 correct) |
+| `kodi_picks` | 3 ranked picks with reasons |
+
+Two defects this direction exposed, both fixed:
+
+1. `snapshot().position` was the 1-based QUEUE SLOT while every consumer (bridge
+   `/tv/state`, the panel, the tool summaries) treats it as PLAYBACK SECONDS.
+   Split into `position` (seconds) and `queueIndex` (slot); service tests moved
+   to assert both.
+2. The post-seek settle window was too short for this box: `seek 10` reported
+   `0:02` while Kodi applied it ~1 s later. Budget widened (14 x 200 ms) and the
+   progress criterion loosened.
+
 ## Known gaps at the time of writing
 
 - `node --test tests/` as a single command did not exit (a leaked handle in one

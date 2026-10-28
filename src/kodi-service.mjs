@@ -70,7 +70,8 @@ import { KodiRpcError } from './rpc.mjs';
  *   playerId: number|null,
  *   playerType: string|null,
  *   item: KodiItem|null,
- *   position: number|null, // 1-based position in the queue; null when nothing is loaded
+ *   position: number|null, // playback position in SECONDS; null when nothing is loaded
+ *   queueIndex: number|null, // 1-based slot in the queue; null when nothing is loaded
  *   percentage: number|null,
  *   speed: number|null,
  *   totaltime: number|null,
@@ -577,6 +578,7 @@ export class KodiService {
       playerType: null,
       item: null,
       position: null,
+      queueIndex: null,
       percentage: null,
       speed: null,
       totaltime: null,
@@ -645,6 +647,7 @@ export class KodiService {
       playerType: state.playerType,
       item: state.item ? { ...state.item } : null,
       position: state.position,
+      queueIndex: state.queueIndex,
       percentage: state.percentage,
       speed: state.speed,
       totaltime: state.totaltime,
@@ -1370,7 +1373,7 @@ export class KodiService {
    * @param {{attempts?: number, delayMs?: number}} [options]
    * @returns {Promise<Record<string, unknown>|null>}
    */
-  async #confirmSeek(playerid, seekValue, before, { attempts = 6, delayMs = 150 } = {}) {
+  async #confirmSeek(playerid, seekValue, before, { attempts = 14, delayMs = 200 } = {}) {
     const expectedSeconds = typeof seekValue.seconds === 'number' ? seekValue.seconds : null;
     const expectedDelta = expectedSeconds !== null && before.seconds !== null ? expectedSeconds - before.seconds : null;
     let last = null;
@@ -1397,7 +1400,7 @@ export class KodiService {
             expectedDelta !== null &&
             expectedDelta !== 0 &&
             Math.sign(seconds - before.seconds) === Math.sign(expectedDelta) &&
-            Math.abs(seconds - before.seconds) >= Math.abs(expectedDelta) * 0.75;
+            Math.abs(seconds - before.seconds) >= Math.abs(expectedDelta) * 0.5;
           settled = nearTarget || progressed || expectedDelta === 0;
         }
         if (settled) return props;
@@ -1570,6 +1573,7 @@ export class KodiService {
       /** @type {KodiItem|null} */
       let item = null;
       let position = null;
+      let queueIndex = null;
       let percentage = null;
       let speed = null;
       let totaltime = null;
@@ -1581,7 +1585,9 @@ export class KodiService {
         ]);
         item = normalizeItem(isRecord(itemResponse) ? itemResponse.item : null, player.type || null);
         const playlistIndex = num(propsResponse?.position);
-        position = playlistIndex === null ? null : playlistIndex + 1; // 1-based, Kodi's index never leaks
+        queueIndex = playlistIndex === null ? null : playlistIndex + 1; // 1-based, Kodi's index never leaks
+        // Kodi's `position` is the queue slot; playback time lives in `time`.
+        position = kodiSeconds(propsResponse?.time);
         percentage = num(propsResponse?.percentage);
         speed = num(propsResponse?.speed);
         totaltime = num(propsResponse?.totaltime);
@@ -1601,6 +1607,7 @@ export class KodiService {
       this.#state.playerType = player ? player.type || null : null;
       this.#state.item = item;
       this.#state.position = position;
+      this.#state.queueIndex = queueIndex;
       this.#state.percentage = percentage;
       this.#state.speed = speed;
       this.#state.totaltime = totaltime;
