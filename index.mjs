@@ -172,13 +172,24 @@ export function apply(ctx, config) {
    * @param text - what the TV should display.
    * @returns the acknowledgement the tool reports.
    */
-  function say({ text }) {
+  async function say({ text }) {
     const clean = String(text ?? '').trim()
     if (clean === '') return { ok: false, error: 'text was empty' }
     state.lastReply = { id: state.pendingAsk?.id ?? null, text: clean, at: new Date().toISOString() }
     state.pendingAsk = null
+    // The reply reaches the panel and a waiting add-on through the bridge; a
+    // notification makes it visible on the TV even when nobody is waiting, so
+    // "shown on the TV" stays true in both cases. A dead Kodi must not turn a
+    // delivered answer into a failed tool call.
+    let onScreen = true
+    try {
+      await kodi.notify({ title: 'DSH', message: clean.slice(0, 250), time: 8 })
+    } catch (error) {
+      onScreen = false
+      log('warn', `TV notification failed: ${error instanceof Error ? error.message : String(error)}`)
+    }
     log('info', `TV display: ${clean.slice(0, 60)}`)
-    return { ok: true }
+    return { ok: true, onScreen }
   }
 
   const picks = () => makePicks(kodi, { limit: settings.picksLimit })
