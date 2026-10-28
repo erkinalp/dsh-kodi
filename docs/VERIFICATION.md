@@ -56,10 +56,15 @@ behind the bridge against the shared mock, which pins the cross-module seam.
 
 ## Not verified — do not read as success
 
-- **The Web panel's live rendering.** The card registers and polls; it rendered
-  with raw locale keys on first install (nested dictionary, flat lookup), which
-  is being fixed. Its slot was chosen from the generated slot catalog because no
-  client inspect channel answered; a live visual re-check is still owed.
+- **The Web panel's live rendering** — RESOLVED for localization. The card first
+  rendered raw locale keys (`panel.nowPlaying`) because the bundle registered a
+  nested dictionary while the locale service does a flat `dict[key]` lookup; the
+  fix flattens at registration, with a test asserting no rendered text matches
+  `^(meta|panel)\.`. The operator confirmed the card now reads "Now playing",
+  "Tonight's picks", "Ask DSH" in the running GUI. That confirmation is theirs,
+  not a measurement of mine: this browser (Firefox) is not reachable by the
+  client-inspect channel or the CDP browser seam. The slot choice remains
+  catalog-grounded rather than live-inspected for the same reason.
 - **WebSocket notifications.** This Kodi has no WebSocket listener on
   `/jsonrpc` (the upgrade answers HTTP 200), so the service ran in polling
   fallback. The notification path is proven against the mock's real RFC 6455
@@ -70,6 +75,12 @@ behind the bridge against the shared mock, which pins the cross-module seam.
   `OutputPicture - failed to configure renderer` and audio-sync warnings during
   one playback session; playback control itself worked.
 - **Kodi add-on visual layout** on a 10-foot display.
+
+## Operator confirmations (not lead measurements)
+
+- Panel localization renders correctly in the live GUI (see above).
+- A question typed on the Kodi on-screen keyboard reached this Session and the
+  answer came back through `/tv/reply` — observed end to end by the operator.
 
 ## Late live fixes (after the first release commit)
 
