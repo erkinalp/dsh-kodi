@@ -71,6 +71,16 @@ behind the bridge against the shared mock, which pins the cross-module seam.
   one playback session; playback control itself worked.
 - **Kodi add-on visual layout** on a 10-foot display.
 
+## Late live fixes (after the first release commit)
+
+- `AudioLibrary.GetArtists` rejects `artist` as a requested property (-32602);
+  the name arrives as `label`. It also rejects `sortname` as a sort method.
+  Albums and songs reject `sortname` as a property. `art` is legal for all
+  three. The artist property list no longer requests `artist`, and a
+  multi-kind `search()` was re-verified live (7 results across movies and
+  episodes) plus a targeted `play` (`{ok:true, playing:true}`, season/episode
+  `null`).
+
 ## Known gaps at the time of writing
 
 - `node --test tests/` as a single command did not exit (a leaked handle in one

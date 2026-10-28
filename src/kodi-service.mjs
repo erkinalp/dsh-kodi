@@ -148,7 +148,7 @@ const LIBRARY_SPECS = {
     idField: 'artistid',
     kind: 'artist',
     filterField: 'artist',
-    properties: ['artist', 'genre', 'thumbnail', 'art', 'description'],
+    properties: ['genre', 'thumbnail', 'art', 'description'],
     sorts: ['artist', 'label', 'dateadded', 'random'],
     countKey: 'artists',
   },
