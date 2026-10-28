@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="program.dsh" name="DSH" version="0.1.0" provider-name="dsh-kodi contributors">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.script" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="kodi.addon.metadata">
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+        </assets>
+        <summary lang="en_GB">DeepSeek Harness on your TV</summary>
+        <summary lang="tr_TR">Televizyonunuzda DeepSeek Harness</summary>
+        <description lang="en_GB">A ten-foot surface for DeepSeek Harness: see what is playing, ask the agent for something to watch on the on-screen keyboard, pick from tonight's suggestions, resume where you left off, and drive playback with a remote - all from the sofa.</description>
+        <description lang="tr_TR">DeepSeek Harness için koltuktan kullanılan bir arayüz: ne oynatıldığını görün, ekran klavyesiyle ajana ne izlemek istediğinizi sorun, bu gecenin önerilerinden seçin, bıraktığınız yerden devam edin ve oynatmayı kumandayla yönetin.</description>
+        <disclaimer lang="en_GB">Talks to the dsh-kodi bridge that the DeepSeek Harness plugin runs on this machine or your LAN.</disclaimer>
+        <disclaimer lang="tr_TR">Bu makinede veya yerel ağınızda DeepSeek Harness eklentisinin çalıştırdığı dsh-kodi köprüsüyle konuşur.</disclaimer>
+        <platform>all</platform>
+        <license>MIT</license>
+    </extension>
+</addon>

@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "title": "Kodi",
+    "description": "Control the Kodi TV, curate the library, and turn the remote into a conversation with the agent."
+  },
+  "panel": {
+    "nowPlaying": "Now playing",
+    "nothingPlaying": "Nothing playing",
+    "paused": "Paused",
+    "queue": "Queue",
+    "queueEmpty": "The queue is empty.",
+    "upNext": "Up next {n}",
+    "picks": "Tonight's picks",
+    "ask": "Ask DSH",
+    "askPlaceholder": "Play something funny for 40 minutes",
+    "send": "Send",
+    "sending": "Sending to the agent…",
+    "waiting": "Waiting for the agent…",
+    "reply": "Agent reply",
+    "askBusy": "An earlier question is still waiting for the agent.",
+    "askFailed": "The question did not reach the agent.",
+    "askTimeout": "The agent did not answer in time.",
+    "offline": "Kodi is not reachable",
+    "actionFailed": "Kodi refused that command.",
+    "play": "Play",
+    "playPause": "Play or pause",
+    "stop": "Stop",
+    "back10": "Back 10 seconds",
+    "forward10": "Forward 10 seconds",
+    "volumeDown": "Volume down",
+    "volumeUp": "Volume up",
+    "progress": "Playback progress",
+    "episode": "S{season}E{episode}",
+    "collapse": "Collapse the Kodi panel",
+    "expand": "Expand the Kodi panel"
+  }
+}

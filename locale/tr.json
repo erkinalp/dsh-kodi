@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "title": "Kodi",
+    "description": "Kodi televizyonunu yönet, kütüphaneyi düzenle ve kumandayı ajanla sohbete dönüştür."
+  },
+  "panel": {
+    "nowPlaying": "Şimdi oynuyor",
+    "nothingPlaying": "Bir şey oynamıyor",
+    "paused": "Duraklatıldı",
+    "queue": "Kuyruk",
+    "queueEmpty": "Kuyruk boş.",
+    "upNext": "Sıradaki {n}",
+    "picks": "Bu akşamın seçkisi",
+    "ask": "DSH'ye sor",
+    "askPlaceholder": "40 dakikalık komik bir şey oynat",
+    "send": "Gönder",
+    "sending": "Ajana gönderiliyor…",
+    "waiting": "Ajan bekleniyor…",
+    "reply": "Ajan yanıtı",
+    "askBusy": "Önceki soru hâlâ ajanın yanıtını bekliyor.",
+    "askFailed": "Soru ajana ulaşmadı.",
+    "askTimeout": "Ajan zamanında yanıt vermedi.",
+    "offline": "Kodi'ye ulaşılamıyor",
+    "actionFailed": "Kodi bu komutu reddetti.",
+    "play": "Oynat",
+    "playPause": "Oynat veya duraklat",
+    "stop": "Durdur",
+    "back10": "10 saniye geri",
+    "forward10": "10 saniye ileri",
+    "volumeDown": "Sesi azalt",
+    "volumeUp": "Sesi artır",
+    "progress": "Oynatma ilerlemesi",
+    "episode": "S{season}B{episode}",
+    "collapse": "Kodi panelini daralt",
+    "expand": "Kodi panelini genişlet"
+  }
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Kodi">
+  <rect x="3" y="9" width="58" height="38" rx="6" fill="none" stroke="#7aa2ff" stroke-width="3.5"/>
+  <path d="M22 54h20M32 47v7" stroke="#7aa2ff" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M26 22l12 6.5L26 35z" fill="#7aa2ff"/>
+  <circle cx="14" cy="41" r="2.6" fill="#7aa2ff"/>
+  <circle cx="22" cy="41" r="2.6" fill="#7aa2ff"/>
+</svg>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings version="1">
+    <section id="program.dsh">
+        <category id="bridge" label="30100">
+            <group id="1">
+                <setting id="bridge_url" type="string" label="30101" help="30104">
+                    <level>0</level>
+                    <default>http://127.0.0.1:8760</default>
+                    <control type="edit" format="string">
+                        <heading>30101</heading>
+                    </control>
+                </setting>
+                <setting id="bridge_token" type="string" label="30102" help="30105" option="hidden">
+                    <level>0</level>
+                    <default/>
+                    <constraints>
+                        <allowempty>true</allowempty>
+                    </constraints>
+                    <control type="edit" format="string" hidden="true">
+                        <heading>30102</heading>
+                    </control>
+                </setting>
+                <setting id="timeout" type="integer" label="30103" help="30106">
+                    <level>0</level>
+                    <default>60</default>
+                    <constraints>
+                        <minimum>5</minimum>
+                        <step>5</step>
+                        <maximum>300</maximum>
+                    </constraints>
+                    <control type="spinner" format="integer"/>
+                </setting>
+            </group>
+        </category>
+    </section>
+</settings>

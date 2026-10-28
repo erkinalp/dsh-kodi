@@ -1,0 +1,52 @@
+{
+  "name": "dsh-kodi",
+  "version": "0.1.0",
+  "description": "Kodi media center for DeepSeek Harness: JSON-RPC control, library curation tools, a now-playing panel, and a TV bridge that turns the remote into a conversation with the agent.",
+  "type": "module",
+  "main": "index.mjs",
+  "exports": {
+    ".": "./index.mjs",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.mjs",
+    "src",
+    "lib",
+    "cordis.patch.yml",
+    "locale",
+    "icon.svg",
+    "kodi-addon",
+    "scripts",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "kodi",
+    "media-center",
+    "jsonrpc",
+    "home-theater",
+    "tv"
+  ],
+  "scripts": {
+    "test": "node --test tests/"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ],
+      "platform": "web"
+    }
+  }
+}

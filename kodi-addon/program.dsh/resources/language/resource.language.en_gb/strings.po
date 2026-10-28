@@ -1,0 +1,343 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: program.dsh 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-28 12:00+0300\n"
+"PO-Revision-Date: 2026-10-28 12:00+0300\n"
+"Last-Translator: dsh-kodi contributors\n"
+"Language-Team: English (United Kingdom)\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: 30000
+msgctxt "#30000"
+msgid "DSH"
+msgstr "DSH"
+
+#: 30001
+msgctxt "#30001"
+msgid "DSH"
+msgstr "DSH"
+
+#: 30002
+msgctxt "#30002"
+msgid "Now playing"
+msgstr "Now playing"
+
+#: 30003
+msgctxt "#30003"
+msgid "Nothing playing"
+msgstr "Nothing playing"
+
+#: 30004
+msgctxt "#30004"
+msgid "Ask DSH"
+msgstr "Ask DSH"
+
+#: 30005
+msgctxt "#30005"
+msgid "Tonight's picks"
+msgstr "Tonight's picks"
+
+#: 30006
+msgctxt "#30006"
+msgid "Resume"
+msgstr "Resume"
+
+#: 30007
+msgctxt "#30007"
+msgid "Remote"
+msgstr "Remote"
+
+#: 30008
+msgctxt "#30008"
+msgid "Settings"
+msgstr "Settings"
+
+#: 30009
+msgctxt "#30009"
+msgid "Close"
+msgstr "Close"
+
+#: 30010
+msgctxt "#30010"
+msgid "Nothing is playing right now."
+msgstr "Nothing is playing right now."
+
+#: 30011
+msgctxt "#30011"
+msgid "Playing: {title}"
+msgstr "Playing: {title}"
+
+#: 30012
+msgctxt "#30012"
+msgid "{time} / {total}"
+msgstr "{time} / {total}"
+
+#: 30013
+msgctxt "#30013"
+msgid "Volume: {volume}%"
+msgstr "Volume: {volume}%"
+
+#: 30014
+msgctxt "#30014"
+msgid "Muted"
+msgstr "Muted"
+
+#: 30015
+msgctxt "#30015"
+msgid "Queue: {count} items"
+msgstr "Queue: {count} items"
+
+#: 30016
+msgctxt "#30016"
+msgid "Progress: {percent}%"
+msgstr "Progress: {percent}%"
+
+#: 30017
+msgctxt "#30017"
+msgid "Speed: {speed}x"
+msgstr "Speed: {speed}x"
+
+#: 30018
+msgctxt "#30018"
+msgid "Connecting to DSH…"
+msgstr "Connecting to DSH…"
+
+#: 30019
+msgctxt "#30019"
+msgid "Bridge: {host}"
+msgstr "Bridge: {host}"
+
+#: 30020
+msgctxt "#30020"
+msgid "Playing: {title} · {time} / {total}"
+msgstr "Playing: {title} · {time} / {total}"
+
+#: 30021
+msgctxt "#30021"
+msgid "Paused: {title} · {time} / {total}"
+msgstr "Paused: {title} · {time} / {total}"
+
+#: 30022
+msgctxt "#30022"
+msgid "Bridge unreachable"
+msgstr "Bridge unreachable"
+
+#: 30023
+msgctxt "#30023"
+msgid "Paused"
+msgstr "Paused"
+
+#: 30024
+msgctxt "#30024"
+msgid "Waiting for DSH… {seconds}s"
+msgstr "Waiting for DSH… {seconds}s"
+
+#: 30025
+msgctxt "#30025"
+msgid "DSH's answer"
+msgstr "DSH's answer"
+
+#: 30026
+msgctxt "#30026"
+msgid "No answer yet. DSH may still be working — open Ask DSH again to collect the answer."
+msgstr "No answer yet. DSH may still be working — open Ask DSH again to collect the answer."
+
+#: 30027
+msgctxt "#30027"
+msgid "A previous question is still waiting for an answer. Waiting for that one instead."
+msgstr "A previous question is still waiting for an answer. Waiting for that one instead."
+
+#: 30028
+msgctxt "#30028"
+msgid "Cancelled. DSH may still answer later."
+msgstr "Cancelled. DSH may still answer later."
+
+#: 30029
+msgctxt "#30029"
+msgid "Ask DSH"
+msgstr "Ask DSH"
+
+#: 30030
+msgctxt "#30030"
+msgid "Sending to DSH…"
+msgstr "Sending to DSH…"
+
+#: 30031
+msgctxt "#30031"
+msgid "Reading the TV state…"
+msgstr "Reading the TV state…"
+
+#: 30032
+msgctxt "#30032"
+msgid "Empty message — nothing was sent."
+msgstr "Empty message — nothing was sent."
+
+#: 30033
+msgctxt "#30033"
+msgid "Working…"
+msgstr "Working…"
+
+#: 30040
+msgctxt "#30040"
+msgid "The bridge URL in Settings is not valid. Use a URL like http://127.0.0.1:8760."
+msgstr "The bridge URL in Settings is not valid. Use a URL like http://127.0.0.1:8760."
+
+#: 30041
+msgctxt "#30041"
+msgid "Cannot reach the DSH bridge at {url}."
+msgstr "Cannot reach the DSH bridge at {url}."
+
+#: 30042
+msgctxt "#30042"
+msgid "The DSH bridge rejected the request: check the bridge token in DSH settings."
+msgstr "The DSH bridge rejected the request: check the bridge token in DSH settings."
+
+#: 30043
+msgctxt "#30043"
+msgid "The DSH bridge did not answer in time."
+msgstr "The DSH bridge did not answer in time."
+
+#: 30044
+msgctxt "#30044"
+msgid "The DSH bridge refused the request."
+msgstr "The DSH bridge refused the request."
+
+#: 30045
+msgctxt "#30045"
+msgid "The DSH bridge sent a reply that is not valid JSON."
+msgstr "The DSH bridge sent a reply that is not valid JSON."
+
+#: 30046
+msgctxt "#30046"
+msgid "The DSH bridge answered in an unexpected format."
+msgstr "The DSH bridge answered in an unexpected format."
+
+#: 30047
+msgctxt "#30047"
+msgid "DSH refused: {detail}"
+msgstr "DSH refused: {detail}"
+
+#: 30048
+msgctxt "#30048"
+msgid "The DSH bridge is busy right now. Try again in a moment."
+msgstr "The DSH bridge is busy right now. Try again in a moment."
+
+#: 30049
+msgctxt "#30049"
+msgid "Empty message — nothing was sent."
+msgstr "Empty message — nothing was sent."
+
+#: 30050
+msgctxt "#30050"
+msgid "Error"
+msgstr "Error"
+
+#: 30051
+msgctxt "#30051"
+msgid "Something went wrong. The details are in kodi.log."
+msgstr "Something went wrong. The details are in kodi.log."
+
+#: 30060
+msgctxt "#30060"
+msgid "No picks are available yet."
+msgstr "No picks are available yet."
+
+#: 30061
+msgctxt "#30061"
+msgid "Nothing to resume yet."
+msgstr "Nothing to resume yet."
+
+#: 30062
+msgctxt "#30062"
+msgid "Sent to Kodi."
+msgstr "Sent to Kodi."
+
+#: 30063
+msgctxt "#30063"
+msgid "{title} — {reason}"
+msgstr "{title} — {reason}"
+
+#: 30064
+msgctxt "#30064"
+msgid "{title} — resume at {time}"
+msgstr "{title} — resume at {time}"
+
+#: 30065
+msgctxt "#30065"
+msgid "· {minutes} min"
+msgstr "· {minutes} min"
+
+#: 30070
+msgctxt "#30070"
+msgid "Play/Pause"
+msgstr "Play/Pause"
+
+#: 30071
+msgctxt "#30071"
+msgid "Stop"
+msgstr "Stop"
+
+#: 30072
+msgctxt "#30072"
+msgid "Back 10 minutes"
+msgstr "Back 10 minutes"
+
+#: 30073
+msgctxt "#30073"
+msgid "Forward 10 minutes"
+msgstr "Forward 10 minutes"
+
+#: 30074
+msgctxt "#30074"
+msgid "Volume up"
+msgstr "Volume up"
+
+#: 30075
+msgctxt "#30075"
+msgid "Volume down"
+msgstr "Volume down"
+
+#: 30076
+msgctxt "#30076"
+msgid "Mute"
+msgstr "Mute"
+
+#: 30100
+msgctxt "#30100"
+msgid "DSH bridge"
+msgstr "DSH bridge"
+
+#: 30101
+msgctxt "#30101"
+msgid "Bridge URL"
+msgstr "Bridge URL"
+
+#: 30102
+msgctxt "#30102"
+msgid "Token"
+msgstr "Token"
+
+#: 30103
+msgctxt "#30103"
+msgid "Answer timeout (seconds)"
+msgstr "Answer timeout (seconds)"
+
+#: 30104
+msgctxt "#30104"
+msgid "Base URL of the dsh-kodi bridge, for example http://127.0.0.1:8760"
+msgstr "Base URL of the dsh-kodi bridge, for example http://127.0.0.1:8760"
+
+#: 30105
+msgctxt "#30105"
+msgid "Token from the DSH profile (bridgeToken). Leave empty when the bridge runs on this machine."
+msgstr "Token from the DSH profile (bridgeToken). Leave empty when the bridge runs on this machine."
+
+#: 30106
+msgctxt "#30106"
+msgid "How long to wait for an answer before giving up."
+msgstr "How long to wait for an answer before giving up."

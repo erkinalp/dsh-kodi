@@ -1,0 +1,8 @@
+node_modules/
+*.log
+.DS_Store
+runlog/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.zip

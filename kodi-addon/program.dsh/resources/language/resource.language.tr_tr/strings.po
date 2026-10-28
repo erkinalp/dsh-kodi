@@ -1,0 +1,343 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: program.dsh 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-28 12:00+0300\n"
+"PO-Revision-Date: 2026-10-28 12:00+0300\n"
+"Last-Translator: dsh-kodi contributors\n"
+"Language-Team: Türkçe\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: 30000
+msgctxt "#30000"
+msgid "DSH"
+msgstr "DSH"
+
+#: 30001
+msgctxt "#30001"
+msgid "DSH"
+msgstr "DSH"
+
+#: 30002
+msgctxt "#30002"
+msgid "Now playing"
+msgstr "Şimdi oynatılıyor"
+
+#: 30003
+msgctxt "#30003"
+msgid "Nothing playing"
+msgstr "Oynatılan yok"
+
+#: 30004
+msgctxt "#30004"
+msgid "Ask DSH"
+msgstr "DSH'ye sor"
+
+#: 30005
+msgctxt "#30005"
+msgid "Tonight's picks"
+msgstr "Bu gecenin seçimleri"
+
+#: 30006
+msgctxt "#30006"
+msgid "Resume"
+msgstr "Devam et"
+
+#: 30007
+msgctxt "#30007"
+msgid "Remote"
+msgstr "Kumanda"
+
+#: 30008
+msgctxt "#30008"
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: 30009
+msgctxt "#30009"
+msgid "Close"
+msgstr "Kapat"
+
+#: 30010
+msgctxt "#30010"
+msgid "Nothing is playing right now."
+msgstr "Şu anda oynatılan bir şey yok."
+
+#: 30011
+msgctxt "#30011"
+msgid "Playing: {title}"
+msgstr "Oynatılıyor: {title}"
+
+#: 30012
+msgctxt "#30012"
+msgid "{time} / {total}"
+msgstr "{time} / {total}"
+
+#: 30013
+msgctxt "#30013"
+msgid "Volume: {volume}%"
+msgstr "Ses: %{volume}"
+
+#: 30014
+msgctxt "#30014"
+msgid "Muted"
+msgstr "Ses kapalı"
+
+#: 30015
+msgctxt "#30015"
+msgid "Queue: {count} items"
+msgstr "Kuyruk: {count} öğe"
+
+#: 30016
+msgctxt "#30016"
+msgid "Progress: {percent}%"
+msgstr "İlerleme: %{percent}"
+
+#: 30017
+msgctxt "#30017"
+msgid "Speed: {speed}x"
+msgstr "Hız: {speed}x"
+
+#: 30018
+msgctxt "#30018"
+msgid "Connecting to DSH…"
+msgstr "DSH'ye bağlanılıyor…"
+
+#: 30019
+msgctxt "#30019"
+msgid "Bridge: {host}"
+msgstr "Köprü: {host}"
+
+#: 30020
+msgctxt "#30020"
+msgid "Playing: {title} · {time} / {total}"
+msgstr "Oynatılıyor: {title} · {time} / {total}"
+
+#: 30021
+msgctxt "#30021"
+msgid "Paused: {title} · {time} / {total}"
+msgstr "Duraklatıldı: {title} · {time} / {total}"
+
+#: 30022
+msgctxt "#30022"
+msgid "Bridge unreachable"
+msgstr "Köprüye ulaşılamıyor"
+
+#: 30023
+msgctxt "#30023"
+msgid "Paused"
+msgstr "Duraklatıldı"
+
+#: 30024
+msgctxt "#30024"
+msgid "Waiting for DSH… {seconds}s"
+msgstr "DSH bekleniyor… {seconds} sn"
+
+#: 30025
+msgctxt "#30025"
+msgid "DSH's answer"
+msgstr "DSH'nin yanıtı"
+
+#: 30026
+msgctxt "#30026"
+msgid "No answer yet. DSH may still be working — open Ask DSH again to collect the answer."
+msgstr "Henüz yanıt yok. DSH hâlâ çalışıyor olabilir — yanıtı almak için DSH'ye sor'u yeniden açın."
+
+#: 30027
+msgctxt "#30027"
+msgid "A previous question is still waiting for an answer. Waiting for that one instead."
+msgstr "Önceki bir soru hâlâ yanıt bekliyor. Onun yanıtı bekleniyor."
+
+#: 30028
+msgctxt "#30028"
+msgid "Cancelled. DSH may still answer later."
+msgstr "İptal edildi. DSH daha sonra yanıtlayabilir."
+
+#: 30029
+msgctxt "#30029"
+msgid "Ask DSH"
+msgstr "DSH'ye sor"
+
+#: 30030
+msgctxt "#30030"
+msgid "Sending to DSH…"
+msgstr "DSH'ye gönderiliyor…"
+
+#: 30031
+msgctxt "#30031"
+msgid "Reading the TV state…"
+msgstr "TV durumu okunuyor…"
+
+#: 30032
+msgctxt "#30032"
+msgid "Empty message — nothing was sent."
+msgstr "Boş mesaj — hiçbir şey gönderilmedi."
+
+#: 30033
+msgctxt "#30033"
+msgid "Working…"
+msgstr "Çalışıyor…"
+
+#: 30040
+msgctxt "#30040"
+msgid "The bridge URL in Settings is not valid. Use a URL like http://127.0.0.1:8760."
+msgstr "Ayarlar'daki köprü adresi geçersiz. http://127.0.0.1:8760 gibi bir adres kullanın."
+
+#: 30041
+msgctxt "#30041"
+msgid "Cannot reach the DSH bridge at {url}."
+msgstr "{url} adresindeki DSH köprüsüne ulaşılamıyor."
+
+#: 30042
+msgctxt "#30042"
+msgid "The DSH bridge rejected the request: check the bridge token in DSH settings."
+msgstr "DSH köprüsü isteği reddetti: DSH ayarlarındaki köprü belirtecini kontrol edin."
+
+#: 30043
+msgctxt "#30043"
+msgid "The DSH bridge did not answer in time."
+msgstr "DSH köprüsü zamanında yanıt vermedi."
+
+#: 30044
+msgctxt "#30044"
+msgid "The DSH bridge refused the request."
+msgstr "DSH köprüsü isteği kabul etmedi."
+
+#: 30045
+msgctxt "#30045"
+msgid "The DSH bridge sent a reply that is not valid JSON."
+msgstr "DSH köprüsü geçerli JSON olmayan bir yanıt gönderdi."
+
+#: 30046
+msgctxt "#30046"
+msgid "The DSH bridge answered in an unexpected format."
+msgstr "DSH köprüsü beklenmeyen bir biçimde yanıt verdi."
+
+#: 30047
+msgctxt "#30047"
+msgid "DSH refused: {detail}"
+msgstr "DSH reddetti: {detail}"
+
+#: 30048
+msgctxt "#30048"
+msgid "The DSH bridge is busy right now. Try again in a moment."
+msgstr "DSH köprüsü şu anda meşgul. Birazdan tekrar deneyin."
+
+#: 30049
+msgctxt "#30049"
+msgid "Empty message — nothing was sent."
+msgstr "Boş mesaj — hiçbir şey gönderilmedi."
+
+#: 30050
+msgctxt "#30050"
+msgid "Error"
+msgstr "Hata"
+
+#: 30051
+msgctxt "#30051"
+msgid "Something went wrong. The details are in kodi.log."
+msgstr "Bir şeyler ters gitti. Ayrıntılar kodi.log dosyasında."
+
+#: 30060
+msgctxt "#30060"
+msgid "No picks are available yet."
+msgstr "Henüz seçim yok."
+
+#: 30061
+msgctxt "#30061"
+msgid "Nothing to resume yet."
+msgstr "Henüz devam ettirilecek bir şey yok."
+
+#: 30062
+msgctxt "#30062"
+msgid "Sent to Kodi."
+msgstr "Kodi'ye gönderildi."
+
+#: 30063
+msgctxt "#30063"
+msgid "{title} — {reason}"
+msgstr "{title} — {reason}"
+
+#: 30064
+msgctxt "#30064"
+msgid "{title} — resume at {time}"
+msgstr "{title} — {time} konumundan devam"
+
+#: 30065
+msgctxt "#30065"
+msgid "· {minutes} min"
+msgstr "· {minutes} dk"
+
+#: 30070
+msgctxt "#30070"
+msgid "Play/Pause"
+msgstr "Oynat/Duraklat"
+
+#: 30071
+msgctxt "#30071"
+msgid "Stop"
+msgstr "Durdur"
+
+#: 30072
+msgctxt "#30072"
+msgid "Back 10 minutes"
+msgstr "10 dakika geri"
+
+#: 30073
+msgctxt "#30073"
+msgid "Forward 10 minutes"
+msgstr "10 dakika ileri"
+
+#: 30074
+msgctxt "#30074"
+msgid "Volume up"
+msgstr "Sesi artır"
+
+#: 30075
+msgctxt "#30075"
+msgid "Volume down"
+msgstr "Sesi azalt"
+
+#: 30076
+msgctxt "#30076"
+msgid "Mute"
+msgstr "Sessiz"
+
+#: 30100
+msgctxt "#30100"
+msgid "DSH bridge"
+msgstr "DSH köprüsü"
+
+#: 30101
+msgctxt "#30101"
+msgid "Bridge URL"
+msgstr "Köprü adresi"
+
+#: 30102
+msgctxt "#30102"
+msgid "Token"
+msgstr "Belirteç"
+
+#: 30103
+msgctxt "#30103"
+msgid "Answer timeout (seconds)"
+msgstr "Yanıt zaman aşımı (saniye)"
+
+#: 30104
+msgctxt "#30104"
+msgid "Base URL of the dsh-kodi bridge, for example http://127.0.0.1:8760"
+msgstr "dsh-kodi köprüsünün temel adresi, örneğin http://127.0.0.1:8760"
+
+#: 30105
+msgctxt "#30105"
+msgid "Token from the DSH profile (bridgeToken). Leave empty when the bridge runs on this machine."
+msgstr "DSH profilindeki belirteç (bridgeToken). Köprü bu makinede çalışıyorsa boş bırakın."
+
+#: 30106
+msgctxt "#30106"
+msgid "How long to wait for an answer before giving up."
+msgstr "Bir yanıttan vazgeçmeden önce ne kadar bekleneceği."

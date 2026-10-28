@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "title": "Kodi",
+    "description": "控制 Kodi 电视、整理媒体库,并把遥控器变成与智能体的对话。"
+  },
+  "panel": {
+    "nowPlaying": "正在播放",
+    "nothingPlaying": "未在播放",
+    "paused": "已暂停",
+    "queue": "播放队列",
+    "queueEmpty": "播放队列为空。",
+    "upNext": "接下来 {n}",
+    "picks": "今晚推荐",
+    "ask": "询问 DSH",
+    "askPlaceholder": "播放 40 分钟轻松搞笑的内容",
+    "send": "发送",
+    "sending": "正在发送给智能体…",
+    "waiting": "等待智能体…",
+    "reply": "智能体回复",
+    "askBusy": "上一个问题还在等待智能体回答。",
+    "askFailed": "问题未能送达智能体。",
+    "askTimeout": "智能体没有及时回答。",
+    "offline": "无法连接 Kodi",
+    "actionFailed": "Kodi 拒绝了这个命令。",
+    "play": "播放",
+    "playPause": "播放或暂停",
+    "stop": "停止",
+    "back10": "后退 10 秒",
+    "forward10": "前进 10 秒",
+    "volumeDown": "降低音量",
+    "volumeUp": "提高音量",
+    "progress": "播放进度",
+    "episode": "第{season}季第{episode}集",
+    "collapse": "收起 Kodi 面板",
+    "expand": "展开 Kodi 面板"
+  }
+}

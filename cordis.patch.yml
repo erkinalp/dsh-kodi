@@ -1,0 +1,23 @@
+# dsh-kodi bundle layer.
+#
+# One row carries both halves of the integration: the Host half exposes the
+# `kodi` service, the kodi_* agent tools, and the TV bridge HTTP listener; the
+# client half (declared through `dsh.client` in package.json) renders the
+# now-playing panel in the Harness Web UI.
+- insert:
+    - id: kodi
+      name: dsh-kodi
+      config:
+        # Kodi's web server (Settings > Services > Control > Web server).
+        url: http://127.0.0.1:8080/jsonrpc
+        user: kodi
+        password: kodi
+        # TV bridge: the Kodi add-on and the panel talk to the agent here.
+        bridgePort: 8760
+        bridgeBind: 127.0.0.1
+        # Empty means loopback-only without a token; a non-loopback bind
+        # refuses to start without a token.
+        bridgeToken: ''
+        # Deliver TV-side questions here. Empty = the most recently active
+        # Session; set a Session id to pin one TV conversation.
+        sessionId: ''
